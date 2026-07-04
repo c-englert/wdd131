@@ -1,11 +1,88 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bem vindo ao WDD131</title>
+    <title>WDD 131 – Fundamentos da Web Dinâmica - Claudio Englert</title>
+    <meta name="description" content="WDD 131 – Fundamentos da Web Dinâmica - Claudio Englert">
+    <meta name="author" content="Claudio Englert">
+    <link rel="stylesheet" href="estilos/base.css">
+    <script src="scripts/obterdatas.js" defer></script>
+
+    <!-- Fonte Play -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Play:wght@400;700&display=swap" rel="stylesheet">
 </head>
+
 <body>
-    <h1>Bem vindo ao WDD131</h1>
+    <header>
+        <h1><span>WDD 131: Fundamentos da Web Dinâmica - Claudio Englert</span></h1>
+        <nav>
+            <ul>
+                <li><a href="https://www.linkedin.com/in/claudio-englert-6140a310/">LinkedIn</a></li>
+                <li><a href="https://byupw.instructure.com/">Canvas</a></li>
+                <li><a
+                        href="https://www.churchofjesuschrist.org/study/scriptures/dc-testament/dc/50?lang=por&id=p24#p24">Escritura</a>
+                </li>
+                <li><a href="index.html">Projeto Final</a></li>
+            </ul>
+        </nav>
+
+    </header>
+    <main>
+        <h1>Claudio Englert</h1>
+        <div class="cards">
+            <section class="card">
+                <h2>Sobre Mim</h2>
+                <div class="sobre-conteudo">
+                    <div class="linha">
+                        <p>Meu nome é Claudio Englert, tenho 62 anos atuando nos últimos 30 como consultor em gestão
+                            empresarial. Tenho duas filhas e 7 netos e sou membro de A Igreja de Jesus Cristo dos Santos
+                            dos Últimos
+                            Dias
+                            onde sirvo atualmente como 1º Conselheiro da Estaca.
+                            Gosto muito de software e tecnologia e já desenvolvi várias soluções em
+                            planilhas
+                            excel
+                            e ultimamente em planilhas google inclusive usando appsheet.</p>
+                        <img src="imagens/claudio.jpg" alt="Foto de Claudio Englert" width="150">
+                    </div>
+                    <div class="linha invertida">
+                        <img src="imagens/dashboard.png" alt="Imagem de um dashboard desenvolvido por Claudio Englert"
+                            width="250">
+                        <p>Em 3 meses produzi 6 apps PWA para substituir as soluções em planilhas e para automatizar
+                            processos
+                            na minha empresa
+                            usando IA para desenvolver em React e backend com banco de dados Supabase e hospedando as
+                            aplicações
+                            no Vercel
+                            ou Github. Em paralelo tenho estudado html, css, python e javascript para ajudar a entender
+                            melhor o
+                            desenvolvimento de software alavancar ainda mais minha capacidade de produzir soluções em
+                            software
+                            para problemas reais.</p>
+                    </div>
+                </div>
+            </section>
+            <section class="card">
+                <h2>Recursos Web Dev</h2>
+                <ul>
+                    <li><a href="https://www.w3schools.com/">W3Schools</a></li>
+                    <li><a href="https://developer.mozilla.org/pt-BR/">MDN Web Docs</a></li>
+                    <li><a href="https://www.freecodecamp.org/">freeCodeCamp</a></li>
+                    <li><a href="https://css-tricks.com/">CSS-Tricks</a></li>
+                    <li><a href="https://www.smashingmagazine.com/">Smashing Magazine</a></li>
+                    <li><a href="https://www.sitepoint.com/">SitePoint</a></li>
+                </ul>
+            </section>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; <span id="anoatual"></span> Claudio Englert, Brasil</p>
+        <p>Última modificação: <span id="ultimaModificacao"></span></p>
+    </footer>
 </body>
+
 </html>
