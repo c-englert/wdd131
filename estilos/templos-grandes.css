@@ -1,0 +1,35 @@
+@media (min-width: 640px) {
+
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    header>p {
+        margin: 0;
+    }
+
+    #menu-hamburguer {
+        display: none;
+    }
+
+    nav ul,
+    nav ul.esconder {
+        display: flex;
+        flex-direction: row;
+    }
+
+    nav a {
+        border-top: none;
+        padding: 0.5rem 1rem;
+    }
+
+    main {
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    }
+
+    main h1 {
+        grid-column: 1 / -1;
+    }
+}

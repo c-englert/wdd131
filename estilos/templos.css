@@ -1,0 +1,127 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;700&display=swap');
+
+:root {
+    --cor-primaria: #1f3a5f;
+    --cor-secundaria: #c9a227;
+    --cor-fundo: #f4f4f4;
+    --cor-texto: #212121;
+    --cor-clara: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.5;
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+    color: var(--cor-primaria);
+}
+
+header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-clara);
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+header>p {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin: 0 0 0.5rem 0;
+    text-align: center;
+}
+
+#menu-hamburguer {
+    background: none;
+    border: none;
+    color: var(--cor-clara);
+    font-size: 1.8rem;
+    cursor: pointer;
+    align-self: flex-end;
+    margin-top: -2.2rem;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+nav ul.esconder {
+    display: none;
+}
+
+nav a {
+    display: block;
+    color: var(--cor-clara);
+    text-decoration: none;
+    padding: 0.75rem;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+nav a:hover {
+    background-color: var(--cor-secundaria);
+    color: var(--cor-primaria);
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+main {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+}
+
+main h1 {
+    grid-column: 1;
+}
+
+figure {
+    margin: 0;
+    background-color: var(--cor-clara);
+    border: 1px solid #ddd;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+figure img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+figcaption {
+    padding: 0.5rem;
+    text-align: center;
+    font-weight: 600;
+    color: var(--cor-primaria);
+}
+
+footer {
+    background-color: var(--cor-primaria);
+    color: var(--cor-clara);
+    text-align: center;
+    padding: 1rem;
+    margin-top: 1rem;
+}
+
+footer p {
+    margin: 0.25rem 0;
+}
