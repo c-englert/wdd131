@@ -1,5 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Roboto:wght@400;700&display=swap');
-
 :root {
     --cor-primaria: #1f3a5f;
     --cor-secundaria: #c9a227;
@@ -82,9 +80,6 @@ main {
     max-width: 1200px;
     margin: 0 auto;
     padding: 1rem;
-}
-
-main {
     display: grid;
     grid-template-columns: 1fr;
     gap: 1rem;
