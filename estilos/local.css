@@ -9,6 +9,8 @@
     --sombra: rgba(0, 0, 0, 0.25);
     --fonte-titulo: 'Georgia', serif;
     --fonte-corpo: 'Segoe UI', system-ui, sans-serif;
+    --borda-linha: #e0e0e0;
+    --sombra-leve: rgba(0, 0, 0, 0.15);
 }
 
 * {
@@ -80,7 +82,7 @@ section {
     background-color: var(--cor-clara);
     border-radius: 8px;
     padding: 1rem;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 2px 8px var(--sombra-leve);
 }
 
 section h2 {
@@ -97,7 +99,7 @@ section h2 {
 
 .dados li {
     padding: 0.3rem 0;
-    border-bottom: 1px solid #e0e0e0;
+    border-bottom: 1px solid var(--borda-linha);
 }
 
 .dados span {
