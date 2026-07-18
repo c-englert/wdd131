@@ -1,0 +1,144 @@
+/* ===== Variáveis globais (crit. CSS) ===== */
+:root {
+    --cor-primaria: #1b5e20;
+    /* verde - campo/pampa */
+    --cor-secundaria: #f9a825;
+    /* dourado - sol de Alegrete */
+    --cor-fundo: #f4f4f0;
+    --cor-texto: #1a1a1a;
+    --cor-clara: #ffffff;
+    --fonte-titulo: 'Georgia', serif;
+    --fonte-corpo: 'Segoe UI', system-ui, sans-serif;
+}
+
+/* ===== Base ===== */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--fonte-corpo);
+    color: var(--cor-texto);
+    background-color: var(--cor-fundo);
+    line-height: 1.5;
+}
+
+/* ===== Header ===== */
+header {
+    background-color: var(--cor-primaria);
+    color: var(--cor-clara);
+    text-align: center;
+    padding: 1rem;
+}
+
+header h1 {
+    font-family: var(--fonte-titulo);
+    margin-bottom: 0.5rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+nav a {
+    color: var(--cor-clara);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* ===== Hero ===== */
+.hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* ===== Conteúdo ===== */
+.conteudo {
+    padding: 1rem;
+}
+
+section {
+    background-color: var(--cor-clara);
+    border-radius: 8px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-family: var(--fonte-titulo);
+    color: var(--cor-primaria);
+    border-bottom: 3px solid var(--cor-secundaria);
+    padding-bottom: 0.3rem;
+    margin-bottom: 0.8rem;
+}
+
+.dados ul {
+    list-style: none;
+}
+
+.dados li {
+    padding: 0.3rem 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.dados span {
+    font-weight: bold;
+    color: var(--cor-primaria);
+}
+
+/* Clima */
+.clima .temperatura {
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--cor-secundaria);
+}
+
+.icone-clima {
+    display: block;
+    /* visível no mobile */
+    margin: 0.5rem 0;
+}
+
+/* ===== Rodapé ===== */
+footer {
+    background-color: var(--cor-primaria);
+    color: var(--cor-clara);
+    text-align: center;
+    padding: 1rem;
+    font-size: 0.9rem;
+}
+
+/* ============================================
+   DESKTOP - min-width: 700px
+   ============================================ */
+@media (min-width: 700px) {
+
+    /* Dados e Clima lado a lado */
+    .conteudo {
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        gap: 1rem;
+        max-width: 1000px;
+        margin: 0 auto;
+    }
+
+    /* Esconde o SVG no desktop (crit. 6) */
+    .icone-clima {
+        display: none;
+    }
+
+    /* Emoticon via pseudoelemento, só no desktop (crit. 7) */
+    .clima h2::after {
+        content: " ⛅";
+    }
+}
