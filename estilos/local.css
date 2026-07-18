@@ -2,12 +2,12 @@
 :root {
     --cor-primaria: #1b5e20;
     --cor-secundaria: #f9a825;
-    /* só decorativo (bordas) */
     --cor-destaque: #b45309;
-    /* dourado escuro p/ TEXTO - AA ok */
     --cor-fundo: #f4f4f0;
     --cor-texto: #1a1a1a;
     --cor-clara: #ffffff;
+    --card-fundo: rgba(255, 255, 255, 0.96);
+    --sombra: rgba(0, 0, 0, 0.25);
     --fonte-titulo: 'Georgia', serif;
     --fonte-corpo: 'Segoe UI', system-ui, sans-serif;
 }
@@ -27,10 +27,14 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
+    overflow-x: hidden;
 }
 
 main {
     flex: 1;
+    width: 100%;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 /* ===== Header ===== */
@@ -69,8 +73,11 @@ nav a:hover {
     display: block;
 }
 
-/* ===== Conteúdo ===== */
+/* ===== Conteúdo (MOBILE: empilhado) ===== */
 .conteudo {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
     padding: 1rem;
 }
 
@@ -78,7 +85,6 @@ section {
     background-color: var(--cor-clara);
     border-radius: 8px;
     padding: 1rem;
-    margin-bottom: 1rem;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
@@ -104,12 +110,10 @@ section h2 {
     color: var(--cor-primaria);
 }
 
-/* Clima */
 .clima .temperatura {
     font-size: 2rem;
     font-weight: bold;
     color: var(--cor-destaque);
-    /* corrigido p/ contraste AA */
 }
 
 .icone-clima {
@@ -127,53 +131,31 @@ footer {
 }
 
 /* ============================================
-   DESKTOP - min-width: 700px  (bloco ÚNICO)
+   DESKTOP - min-width: 700px  (BLOCO ÚNICO)
    ============================================ */
 @media (min-width: 700px) {
-    main {
-        position: relative;
-    }
-
     .hero img {
-        width: 100%;
-        height: 75vh;
-        /* foto ocupa até o rodapé */
+        max-height: 60vh;
         object-fit: cover;
-        object-position: center;
     }
 
-    /* Dados à esquerda, Clima à direita, sobre a foto */
     .conteudo {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
+        grid-template-columns: 2fr 1fr;
+        max-width: 1000px;
+        margin: -100px auto 0;
+        position: relative;
         z-index: 1;
-
-        display: flex;
-        align-items: center;
-        /* centraliza na vertical */
-        justify-content: space-between;
-        padding: 2rem;
-        pointer-events: none;
-        /* deixa a foto "respirar" */
     }
 
-    .conteudo section {
-        pointer-events: auto;
-        width: 340px;
-        margin-bottom: 0;
-        background-color: rgba(255, 255, 255, 0.94);
-        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.3);
+    section {
+        background-color: var(--card-fundo);
+        box-shadow: 0 4px 16px var(--sombra);
     }
 
-    /* Esconde o SVG no desktop (crit. 6) */
     .icone-clima {
         display: none;
     }
 
-    /* Emoticon via pseudoelemento, só no desktop (crit. 7) */
     .clima h2::after {
         content: " ⛅";
     }
