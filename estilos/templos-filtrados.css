@@ -4,6 +4,9 @@
     --cor-fundo: #f4f4f4;
     --cor-texto: #212121;
     --cor-clara: #ffffff;
+    --cor-borda: #dddddd;
+    --cor-sombra: rgba(0, 0, 0, 0.1);
+    --cor-linha-nav: rgba(255, 255, 255, 0.2);
 }
 
 * {
@@ -68,7 +71,7 @@ nav a {
     text-decoration: none;
     padding: 0.75rem;
     text-align: center;
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid var(--cor-linha-nav);
 }
 
 nav a:hover {
@@ -82,7 +85,6 @@ main {
     padding: 1rem;
 }
 
-/* Galeria agora é o grid (antes era o main) */
 .galeria {
     display: grid;
     grid-template-columns: 1fr;
@@ -99,8 +101,8 @@ figure img {
 figure {
     margin: 0;
     background-color: var(--cor-clara);
-    border: 1px solid #ddd;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--cor-borda);
+    box-shadow: 0 2px 4px var(--cor-sombra);
     display: flex;
     flex-direction: column;
 }
