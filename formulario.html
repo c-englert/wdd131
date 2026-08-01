@@ -1,14 +1,17 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Formulário de avaliação de produto do curso WDD 131 - envie sua opinião sobre o produto adquirido.">
+  <meta name="description"
+    content="Formulário de avaliação de produto do curso WDD 131 - envie sua opinião sobre o produto adquirido.">
   <meta name="author" content="Claudio">
   <title>Avaliação de Produto | WDD 131</title>
   <link rel="stylesheet" href="estilos/formulario.css">
   <script src="scripts/formulario.js" defer></script>
 </head>
+
 <body>
   <header>
     <h1>Avaliação de Produto</h1>
@@ -19,7 +22,6 @@
       <h2 id="form-title">Conte sua experiência</h2>
       <p class="legenda-obrigatorio">Campos marcados com <span class="req">*</span> são obrigatórios.</p>
 
-      <!-- Nome do produto: preenchido via JavaScript a partir do array de produtos -->
       <label for="product-name">
         Nome do Produto <span class="req">*</span>
         <select id="product-name" name="product-name" required>
@@ -27,7 +29,6 @@
         </select>
       </label>
 
-      <!-- Classificação geral: estrelas (radio), obrigatório -->
       <fieldset class="rating">
         <legend>Classificação Geral <span class="req">*</span></legend>
         <div class="stars">
@@ -44,13 +45,11 @@
         </div>
       </fieldset>
 
-      <!-- Data de instalação: obrigatório -->
       <label for="install-date">
         Data de Instalação <span class="req">*</span>
         <input type="date" id="install-date" name="install-date" required>
       </label>
 
-      <!-- Recursos úteis: checkboxes com label explícito -->
       <fieldset class="features">
         <legend>Recursos Úteis</legend>
         <div class="feature">
@@ -75,10 +74,10 @@
         </div>
       </fieldset>
 
-      <!-- Avaliação escrita -->
       <label for="review-text">
         Avaliação por escrito
-        <textarea id="review-text" name="review-text" rows="5" placeholder="Escreva sua opinião sobre o produto…"></textarea>
+        <textarea id="review-text" name="review-text" rows="5"
+          placeholder="Escreva sua opinião sobre o produto…"></textarea>
       </label>
 
       <!-- Nome de quem avalia -->
@@ -96,4 +95,5 @@
     <p id="lastModified"></p>
   </footer>
 </body>
+
 </html>

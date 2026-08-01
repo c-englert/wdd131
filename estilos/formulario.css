@@ -23,7 +23,6 @@ body {
   line-height: 1.5;
 }
 
-/* Cabeçalho e rodapé — repetição de cor/alinhamento */
 header,
 footer {
   background-color: var(--cor-primaria);
@@ -46,14 +45,12 @@ footer p {
   margin: 0.25rem 0;
 }
 
-/* Área principal */
 main {
   max-width: 640px;
   margin: 1.5rem auto;
   padding: 0 1rem;
 }
 
-/* Cartão do formulário */
 form,
 .confirmacao {
   background-color: var(--cor-card);
@@ -77,7 +74,6 @@ h2 {
   font-weight: 700;
 }
 
-/* Rótulos empilhados — proximidade entre rótulo e campo */
 form label {
   display: block;
   margin-bottom: 1.1rem;
@@ -105,7 +101,6 @@ textarea {
   resize: vertical;
 }
 
-/* Foco visível para acessibilidade */
 input:focus,
 select:focus,
 textarea:focus,
@@ -114,7 +109,6 @@ button:focus {
   outline-offset: 2px;
 }
 
-/* Fieldsets — agrupamento por proximidade */
 fieldset {
   border: 1px solid var(--cor-borda);
   border-radius: 6px;
@@ -127,7 +121,6 @@ legend {
   padding: 0 0.4rem;
 }
 
-/* Checkboxes de recursos */
 .feature {
   display: flex;
   align-items: center;
@@ -141,7 +134,6 @@ legend {
   margin: 0;
 }
 
-/* Texto acessível apenas para leitores de tela */
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -154,7 +146,6 @@ legend {
   border: 0;
 }
 
-/* Classificação por estrelas (radios) */
 .stars {
   display: flex;
   flex-direction: row-reverse;
@@ -178,25 +169,21 @@ legend {
   margin: 0;
 }
 
-/* Desenha a estrela via CSS (o texto do label fica só para leitores de tela) */
 .stars label::before {
   content: "★";
 }
 
-/* Preenche a estrela marcada e todas à esquerda (irmãs seguintes no DOM invertido) */
-.stars input:checked ~ label,
+.stars input:checked~label,
 .stars label:hover,
-.stars label:hover ~ label {
+.stars label:hover~label {
   color: var(--cor-estrela);
 }
 
-/* Realce quando um radio recebe foco por teclado */
-.stars input:focus + label {
+.stars input:focus+label {
   outline: 3px solid var(--cor-primaria);
   outline-offset: 2px;
 }
 
-/* Botão de envio */
 input[type="submit"] {
   display: block;
   width: 100%;
@@ -214,7 +201,6 @@ input[type="submit"]:hover {
   background-color: var(--cor-primaria-escura);
 }
 
-/* Página de confirmação */
 .confirmacao {
   text-align: center;
 }
@@ -239,7 +225,6 @@ input[type="submit"]:hover {
   background-color: var(--cor-primaria-escura);
 }
 
-/* Desktop — mais respiro, mantém alinhamento */
 @media (min-width: 700px) {
   header h1 {
     font-size: 2rem;
