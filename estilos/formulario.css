@@ -1,0 +1,230 @@
+:root {
+  --cor-primaria: #1f4e79;
+  --cor-primaria-escura: #163a5a;
+  --cor-texto: #1a1a1a;
+  --cor-fundo: #eef2f6;
+  --cor-card: #ffffff;
+  --cor-borda: #6b7683;
+  --cor-obrigatorio: #b30000;
+  --cor-estrela: #b0752b;
+  --cor-estrela-vazia: #6b7280;
+  --sombra: 0 2px 10px rgba(0, 0, 0, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--cor-texto);
+  background-color: var(--cor-fundo);
+  line-height: 1.5;
+}
+
+/* Cabeçalho e rodapé — repetição de cor/alinhamento */
+header,
+footer {
+  background-color: var(--cor-primaria);
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 1.6rem;
+}
+
+footer {
+  font-size: 0.85rem;
+  margin-top: 2rem;
+}
+
+footer p {
+  margin: 0.25rem 0;
+}
+
+/* Área principal */
+main {
+  max-width: 640px;
+  margin: 1.5rem auto;
+  padding: 0 1rem;
+}
+
+/* Cartão do formulário */
+form,
+.confirmacao {
+  background-color: var(--cor-card);
+  padding: 1.5rem;
+  border-radius: 10px;
+  box-shadow: var(--sombra);
+}
+
+h2 {
+  margin-top: 0;
+  color: var(--cor-primaria-escura);
+}
+
+.legenda-obrigatorio {
+  font-size: 0.9rem;
+  margin-top: 0;
+}
+
+.req {
+  color: var(--cor-obrigatorio);
+  font-weight: 700;
+}
+
+/* Rótulos empilhados — proximidade entre rótulo e campo */
+form label {
+  display: block;
+  margin-bottom: 1.1rem;
+  font-weight: 600;
+}
+
+input[type="text"],
+input[type="date"],
+select,
+textarea {
+  display: block;
+  width: 100%;
+  margin-top: 0.35rem;
+  padding: 0.6rem;
+  font-size: 1rem;
+  font-family: inherit;
+  font-weight: 400;
+  color: var(--cor-texto);
+  background-color: #ffffff;
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+}
+
+textarea {
+  resize: vertical;
+}
+
+/* Foco visível para acessibilidade */
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+  outline: 3px solid var(--cor-primaria);
+  outline-offset: 2px;
+}
+
+/* Fieldsets — agrupamento por proximidade */
+fieldset {
+  border: 1px solid var(--cor-borda);
+  border-radius: 6px;
+  margin: 0 0 1.1rem 0;
+  padding: 0.75rem 1rem 1rem;
+}
+
+legend {
+  font-weight: 600;
+  padding: 0 0.4rem;
+}
+
+/* Checkboxes de recursos */
+.features label {
+  font-weight: 400;
+  margin-bottom: 0.4rem;
+}
+
+.features input {
+  margin-right: 0.5rem;
+}
+
+/* Classificação por estrelas (radios) */
+.stars {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-end;
+  font-size: 2rem;
+  line-height: 1;
+}
+
+.stars input {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  opacity: 0;
+}
+
+.stars label {
+  color: var(--cor-estrela-vazia);
+  cursor: pointer;
+  padding: 0 0.1rem;
+  font-weight: 400;
+  margin: 0;
+}
+
+/* Preenche a estrela marcada e todas à esquerda (irmãs seguintes no DOM invertido) */
+.stars input:checked ~ label,
+.stars label:hover,
+.stars label:hover ~ label {
+  color: var(--cor-estrela);
+}
+
+/* Realce quando um radio recebe foco por teclado */
+.stars input:focus + label {
+  outline: 3px solid var(--cor-primaria);
+  outline-offset: 2px;
+}
+
+/* Botão de envio */
+input[type="submit"] {
+  display: block;
+  width: 100%;
+  padding: 0.8rem;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #ffffff;
+  background-color: var(--cor-primaria);
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: var(--cor-primaria-escura);
+}
+
+/* Página de confirmação */
+.confirmacao {
+  text-align: center;
+}
+
+.contador {
+  font-size: 1.15rem;
+  font-weight: 600;
+}
+
+.botao-voltar {
+  display: inline-block;
+  margin-top: 0.5rem;
+  padding: 0.7rem 1.2rem;
+  color: #ffffff;
+  background-color: var(--cor-primaria);
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: 700;
+}
+
+.botao-voltar:hover {
+  background-color: var(--cor-primaria-escura);
+}
+
+/* Desktop — mais respiro, mantém alinhamento */
+@media (min-width: 700px) {
+  header h1 {
+    font-size: 2rem;
+  }
+
+  form,
+  .confirmacao {
+    padding: 2rem;
+  }
+}
