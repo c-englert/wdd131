@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Inscreva uma nova música para a próxima edição do festival Barrifórnia da Canção Familiar.">
+  <title>Participar — Barrifórnia da Canção Familiar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Source+Sans+3:wght@400;600&amp;display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="estilos/barrifornia.css">
+</head>
+
+<body>
+  <header class="cabecalho">
+    <div class="cabecalho-conteudo">
+      <a class="marca" href="index.html">Barri<span>fórnia</span></a>
+      <nav class="navegacao" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="edicoes.html">Edições</a>
+        <a href="participar.html" aria-current="page">Participar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h1 class="titulo-secao">Inscreva sua música</h1>
+      <p>
+        Quer concorrer na próxima edição do festival? Preencha os dados da sua
+        música abaixo para fazer a inscrição. Cada verão traz novas canções — a
+        sua pode ser a próxima campeã.
+      </p>
+
+      <form class="formulario" method="get" action="enviado.html">
+        <fieldset>
+          <legend>Seus dados</legend>
+          <div class="campo">
+            <label for="nome">Nome do responsável</label>
+            <input type="text" id="nome" name="nome" required>
+          </div>
+          <div class="campo">
+            <label for="email">E-mail</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+        </fieldset>
+
+        <fieldset>
+          <legend>Sobre a música</legend>
+          <div class="campo">
+            <label for="titulo">Título da música</label>
+            <input type="text" id="titulo" name="titulo" required>
+          </div>
+          <div class="campo">
+            <label for="grupo">Grupo ou intérprete</label>
+            <input type="text" id="grupo" name="grupo" required>
+          </div>
+          <div class="campo">
+            <label for="categoria">Categoria</label>
+            <select id="categoria" name="categoria" required>
+              <option value="">Selecione</option>
+              <option value="adulto">Adulto</option>
+              <option value="infantil">Infantil</option>
+              <option value="homenagem">Homenagem</option>
+              <option value="outra">Outra</option>
+            </select>
+          </div>
+          <div class="campo">
+            <label for="letra">Letra da música</label>
+            <textarea id="letra" name="letra" required></textarea>
+          </div>
+          <div class="campo">
+            <label for="observacoes">Observações (opcional)</label>
+            <textarea id="observacoes" name="observacoes"></textarea>
+          </div>
+        </fieldset>
+
+        <button type="submit" class="botao">Enviar inscrição</button>
+      </form>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Barrifórnia da Canção Familiar — arquivo do festival desde 1982.</p>
+    <p><a href="referencias.html">Referências e créditos</a></p>
+  </footer>
+</body>
+
+</html>

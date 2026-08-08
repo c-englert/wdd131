@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description"
+    content="Acervo consultável das edições do festival Barrifórnia: busque por ano, tema ou música e marque suas edições favoritas.">
+  <title>Edições — Barrifórnia da Canção Familiar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;700&amp;family=Source+Sans+3:wght@400;600&amp;display=swap"
+    rel="stylesheet">
+  <link rel="icon" href="images/favicon.png" type="image/png">
+  <link rel="stylesheet" href="estilos/barrifornia.css">
+</head>
+
+<body>
+  <header class="cabecalho">
+    <div class="cabecalho-conteudo">
+      <a class="marca" href="index.html">Barri<span>fórnia</span></a>
+      <nav class="navegacao" aria-label="Navegação principal">
+        <a href="index.html">Início</a>
+        <a href="edicoes.html" aria-current="page">Edições</a>
+        <a href="participar.html">Participar</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section>
+      <h1 class="titulo-secao">Acervo de edições</h1>
+      <p>
+        Busque por ano, tema, local ou nome de música. Marque com a estrela as
+        edições que você quer revisitar — elas ficam salvas neste navegador.
+      </p>
+
+      <div class="controles">
+        <div>
+          <label for="busca">Buscar no acervo</label>
+          <input type="search" id="busca" placeholder="Ex.: 1995, galpão, reencontro">
+        </div>
+        <div class="campo-checkbox">
+          <input type="checkbox" id="filtro-favoritos">
+          <label for="filtro-favoritos">Só favoritas</label>
+        </div>
+      </div>
+
+      <p id="contador" class="contador"></p>
+      <div id="lista-edicoes" class="lista-edicoes"></div>
+    </section>
+  </main>
+
+  <footer class="rodape">
+    <p>Barrifórnia da Canção Familiar — arquivo do festival desde 1982.</p>
+    <p><a href="referencias.html">Referências e créditos</a></p>
+  </footer>
+
+  <script src="scripts/edicoes.js"></script>
+</body>
+
+</html>
