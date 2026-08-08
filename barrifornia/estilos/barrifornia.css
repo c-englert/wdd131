@@ -2,6 +2,7 @@
   --vinho: #6b2b2b;
   --vinho-escuro: #4a1d1d;
   --ambar: #c8860d;
+  --ambar-texto: #8a5a06;
   --creme: #faf6f0;
   --creme-escuro: #efe7db;
   --texto: #2b2320;
@@ -29,7 +30,7 @@ h3 {
 }
 
 a {
-  color: var(--ambar);
+  color: var(--ambar-texto);
 }
 
 img {
@@ -234,9 +235,7 @@ section {
   display: block;
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--ambar);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  color: var(--ambar-texto);
 }
 
 .card h3 {
@@ -380,7 +379,7 @@ section {
 }
 
 .rodape a {
-  color: var(--ambar);
+  color: #f0b869;
 }
 
 .rodape p {
